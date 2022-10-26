@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/bkg_custom_grad_lin"
+    android:layout_height="match_parent"
+    tools:context=".HelpFragment">
+
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_hor_05"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.05" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_hor_35"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.35" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_vert_05"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.05" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_hor_10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.10" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_hor_90"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.90" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_hor_95"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.95" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_hor_50"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.50" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_vert_95"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.95" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_vert_85"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.85" />
+
+    <ImageView
+        android:id="@+id/btn_img_exit_help_frag"
+        android:layout_width="0dp"
+        android:alpha="0.8"
+        android:layout_height="0dp"
+        android:src="@drawable/close_settings"
+        app:layout_constraintBottom_toBottomOf="@id/guideline_hor_10"
+        app:layout_constraintDimensionRatio="1,1"
+        app:layout_constraintEnd_toEndOf="@id/guideline_vert_95"
+        app:layout_constraintTop_toTopOf="@id/guideline_hor_05" />
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_title_help_frag"
+        android:layout_width="0dp"
+        android:padding="2dp"
+        android:alpha="0.8"
+        android:layout_height="0dp"
+        android:autoSizeTextType="uniform"
+        android:fontFamily="@font/montserrat_black"
+        android:gravity="center"
+        android:text="~~ some help ~~"
+        android:textAllCaps="true"
+        android:textColor="@color/add_colour_the_most_dark"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintBottom_toBottomOf="@id/guideline_hor_10"
+        app:layout_constraintEnd_toEndOf="@id/guideline_vert_85"
+        app:layout_constraintStart_toStartOf="@id/guideline_vert_05"
+        app:layout_constraintTop_toTopOf="@id/guideline_hor_05" />
+
+
+    <ImageView
+        android:id="@+id/img_logo_main_help_fragment"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:layout_marginTop="38dp"
+        android:src="@drawable/confused"
+        app:layout_constraintDimensionRatio="1,1"
+        app:layout_constraintEnd_toEndOf="@id/guideline_vert_95"
+        app:layout_constraintStart_toStartOf="@id/guideline_vert_05"
+        app:layout_constraintTop_toBottomOf="@id/tv_title_help_frag" />
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_gallery_photos"
+        android:layout_width="0dp"
+        android:alpha="0.9"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="28dp"
+        android:fontFamily="@font/montserrat_black"
+        android:text="@string/screenshots"
+        app:layout_constraintVertical_chainStyle="packed"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@id/btn_rules"
+        app:layout_constraintEnd_toEndOf="@id/guideline_vert_95"
+        app:layout_constraintStart_toStartOf="@id/guideline_vert_05"
+        app:layout_constraintTop_toBottomOf="@id/img_logo_main_help_fragment" />
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_rules"
+        android:layout_width="0dp"
+        android:alpha="0.9"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="28dp"
+        android:fontFamily="@font/montserrat_black"
+        android:text="@string/rules"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@id/btn_app_info"
+        app:layout_constraintEnd_toEndOf="@id/guideline_vert_95"
+        app:layout_constraintStart_toStartOf="@id/guideline_vert_05"
+        app:layout_constraintTop_toBottomOf="@id/btn_gallery_photos" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_app_info"
+        android:layout_width="0dp"
+        android:alpha="0.9"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="28dp"
+        android:fontFamily="@font/montserrat_black"
+        android:text="@string/app_info"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@id/guideline_hor_95"
+        app:layout_constraintEnd_toEndOf="@id/guideline_vert_95"
+        app:layout_constraintStart_toStartOf="@id/guideline_vert_05"
+        app:layout_constraintTop_toBottomOf="@id/btn_rules" />
+
+
+    <TextView
+        android:id="@+id/tv_dovn_text_help_frag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="11sp"
+        android:textAllCaps="true"
+        android:fontFamily="@font/opensans_regular"
+        android:text="@string/dovn_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guideline_hor_95" />
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

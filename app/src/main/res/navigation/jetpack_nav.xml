@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/jetpack_nav"
+    app:startDestination="@id/firstFragment">
+
+    <fragment
+        android:id="@+id/firstFragment"
+        android:name="com.quizappdrink.drinkeat.FirstFragment"
+        android:label="fragment_first"
+        tools:layout="@layout/fragment_first" >
+        <action
+            android:id="@+id/action_firstFragment_to_drinkQuizFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right"
+            app:destination="@id/drinkQuizFragment" />
+        <action
+            android:id="@+id/action_firstFragment_to_foodQuizFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right"
+            app:destination="@id/foodQuizFragment" />
+        <action
+            android:id="@+id/action_firstFragment_to_helpFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right"
+            app:destination="@id/helpFragment" />
+        <action
+            android:id="@+id/action_firstFragment_to_setttttingsFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right"
+            app:destination="@id/setttttingsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/foodQuizFragment"
+        android:name="com.quizappdrink.drinkeat.FoodQuizFragment"
+        android:label="fragment_food_quiz"
+        tools:layout="@layout/fragment_food_quiz" >
+        <action
+            android:id="@+id/action_foodQuizFragment_to_yesFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right"
+            app:destination="@id/yesFragment" />
+        <action
+            android:id="@+id/action_foodQuizFragment_to_noFragment"
+            app:destination="@id/noFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:launchSingleTop="true"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right"
+            app:popUpToInclusive="false" />
+        <action
+            android:id="@+id/action_foodQuizFragment_to_rulesQuizzzzFragment"
+            app:destination="@id/rulesQuizzzzFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/drinkQuizFragment"
+        android:name="com.quizappdrink.drinkeat.DrinkQuizFragment"
+        android:label="fragment_drink_quiz"
+        tools:layout="@layout/fragment_drink_quiz" >
+        <action
+            android:id="@+id/action_drinkQuizFragment_to_yesFragment"
+            app:destination="@id/yesFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:launchSingleTop="true"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right" />
+        <action
+            android:id="@+id/action_drinkQuizFragment_to_noFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right"
+            app:destination="@id/noFragment" />
+        <action
+            android:id="@+id/action_drinkQuizFragment_to_rulesQuizzzzFragment"
+            app:destination="@id/rulesQuizzzzFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/setttttingsFragment"
+        android:name="com.quizappdrink.drinkeat.SetttttingsFragment"
+        android:label="fragment_setttttings"
+        tools:layout="@layout/fragment_setttttings" />
+    <fragment
+        android:id="@+id/photoGalllleryFragment"
+        android:name="com.quizappdrink.drinkeat.PhotoGalllleryFragment"
+        android:label="fragment_photo_gallllery"
+        tools:layout="@layout/fragment_photo_gallllery" />
+    <fragment
+        android:id="@+id/helpFragment"
+        android:name="com.quizappdrink.drinkeat.HelpFragment"
+        android:label="fragment_main_rules"
+        tools:layout="@layout/fragment_help" >
+        <action
+            android:id="@+id/action_helpFragment_to_rulesQuizzzzFragment"
+            app:destination="@id/rulesQuizzzzFragment" />
+        <action
+            android:id="@+id/action_helpFragment_to_photoGalllleryFragment"
+            app:destination="@id/photoGalllleryFragment" />
+        <action
+            android:id="@+id/action_helpFragment_to_someInfoFragment"
+            app:destination="@id/someInfoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/yesFragment"
+        android:name="com.quizappdrink.drinkeat.YesFragment"
+        android:label="fragment_yes"
+        tools:layout="@layout/fragment_yes" >
+        <action
+            android:id="@+id/action_yesFragment_to_firstFragment"
+            app:enterAnim="@anim/from_left"
+            app:exitAnim="@anim/to_right"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right"
+            app:destination="@id/firstFragment" />
+        <argument
+            android:name="quiz_type"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_yesFragment_to_drinkQuizFragment"
+            app:enterAnim="@anim/from_left"
+            app:exitAnim="@anim/to_right"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right"
+            app:destination="@id/drinkQuizFragment" />
+        <action
+            android:id="@+id/action_yesFragment_to_foodQuizFragment"
+            app:enterAnim="@anim/from_left"
+            app:exitAnim="@anim/to_right"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right"
+            app:destination="@id/foodQuizFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/noFragment"
+        android:name="com.quizappdrink.drinkeat.NoFragment"
+        android:label="fragment_no"
+        tools:layout="@layout/fragment_no" >
+        <action
+            android:id="@+id/action_noFragment_to_firstFragment"
+            app:enterAnim="@anim/from_left"
+            app:exitAnim="@anim/to_right"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right"
+            app:destination="@id/firstFragment" />
+        <argument
+            android:name="quizzzzz_type"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_noFragment_to_foodQuizFragment"
+            app:enterAnim="@anim/from_left"
+            app:exitAnim="@anim/to_right"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right"
+            app:destination="@id/foodQuizFragment" />
+        <action
+            android:id="@+id/action_noFragment_to_drinkQuizFragment"
+            app:destination="@id/drinkQuizFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/rulesQuizzzzFragment"
+        android:name="com.quizappdrink.drinkeat.RulesQuizzzzFragment"
+        android:label="fragment_rules_quizzzz"
+        tools:layout="@layout/fragment_rules_quizzzz" >
+        <action
+            android:id="@+id/action_rulesQuizzzzFragment_to_firstFragment"
+            app:enterAnim="@anim/from_left"
+            app:exitAnim="@anim/to_right"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right"
+            app:destination="@id/firstFragment"
+            app:launchSingleTop="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/someInfoFragment"
+        android:name="com.quizappdrink.drinkeat.SomeInfoFragment"
+        android:label="fragment_some_info"
+        tools:layout="@layout/fragment_some_info" />
+</navigation>
